@@ -2,14 +2,13 @@
 class LinkedList {
 
     // A linked list node
-class Node {
-    int data;
-    Node next;
-}
+    class Node {
+        int data;
+        Node next;
+    }
 
     // Driver code
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Start with the empty lsist
         LinkedList list = new LinkedList();
 
@@ -23,18 +22,19 @@ class Node {
 
         System.out.print("After inserting nodes at the front: ");
         list.printList();
-          list.removeFirstNode();
-          System.out.print("After removing first node: ");
-          list.printList();
+        list.removeFirstNode();
+        System.out.print("After removing first node(head): ");
+        list.printList();
+        list.removeLastNode();
+        System.out.print("After removing last node(tail): ");
     }
 
     Node head; // head of list
 
-      // Given a reference (pointer to pointer)
+    // Given a reference (pointer to pointer)
     // to the head of a list and an int, inserts
     // a new node on the front of the list.
-    void insertAtFront(int new_data)
-    {
+    void insertAtFront(int new_data) {
         // 1. allocate node
         Node new_node = new Node();
 
@@ -48,21 +48,24 @@ class Node {
         // to the new node
         head = new_node;
     }
-  
+
     // Function to remove the first node
     // of the linked list /
-    void removeFirstNode()
-    {
+    void removeFirstNode() {
         if (head == null)
             return;
- 
+
         head = head.next;
+    }
+
+    // Function to remove the last node of linked list
+    void removeLastNode() {
+
     }
 
     // This function prints contents of
     // linked list starting from head
-    void printList()
-    {
+    void printList() {
         Node node = head;
         while (node != null) {
             System.out.print(node.data + " ");
