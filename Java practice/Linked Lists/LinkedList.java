@@ -19,6 +19,7 @@ class Node {
         list.insertAtFront(3);
         list.insertAtFront(2);
         list.insertAtFront(1);
+        list.insertAtFront(0);
 
         System.out.print("After inserting nodes at the front: ");
         list.printList();
